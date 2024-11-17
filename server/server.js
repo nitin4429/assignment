@@ -20,19 +20,6 @@ app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
 
-
-// // Authentication Middleware
-// const authenticateJWT = (req, res, next) => {
-//     const token = req.header('Authorization');
-//     if (!token) return res.status(401).json({ message: 'Access denied' });
-
-//     jwt.verify(token, 'your_jwt_secret', (err, user) => {
-//         if (err) return res.status(403).json({ message: 'Invalid token' });
-//         req.user = user;
-//         next();
-//     });
-// };
-
 import User from './models/login.model.js';
 
 // Register Route
